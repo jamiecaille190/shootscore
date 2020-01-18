@@ -1,0 +1,17 @@
+shootscore
+
+rating from 0 to 1 on how good of a shooting season it was, 1 is the highest score, 0 is no shots, scores are scaled to compare to highest score
+
+score is cumulative, each shot contributes to total score and score is calculated at end of season (or end of week whatever)
+
+each shot is worth:
+
+((1 - (% of shots at that distance that go in))^2) * (points shot was worth) if it goes in -> all shots count (free throw, 2 ptr, 3 ptr)
+
+-((0 - (% of shots at that distance that go in))^2) if it doesn't go in
+
+for a particular season, shotscore shows "who was best shooter that season", function of accuracy and volume because you need to score a lot and shoot well
+
+OR for score instead of 0 to 1 just keep pure score, works too, better way of comparing in 1 season instead of over multiple
+
+extension: can sum all shootscores over a career to say who was the "goat shooter" OR compile all shootscores from all seasons into one collective, so all seasons are ranked against the best season and then sum, probably a much much better way of comparing
